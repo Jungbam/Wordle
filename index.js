@@ -79,7 +79,6 @@ const getCurrentWord = () => {
   // reduce(x,y) : 배열의 값을 점진적으로 줄이면서 계산하는 함수
 }
 const isWordValid = (word) => {
-  console.log(word)
   return answer.includes(word)
 }
 const revealWord = (word) => {
@@ -131,7 +130,6 @@ const removeLetter = () => {
 const keyboardEventFunc = () => {
   document.body.onkeydown = (e) => {
     const key = e.key
-    console.log('hi')
     if (key === 'Enter') {
       //엔터를 눌렀을 때 그 값을 word로 저장
       if (checkArray.currentCol === 5) {
@@ -153,7 +151,6 @@ const keyboardEventFunc = () => {
   }
 }
 //--------------------------------------------------------------------
-// 5x5를 만든다. => 함수로
 const drawBasic = (container, row, col, letter = '') => {
   const box = document.createElement('div')
   box.className = 'wordleBox'
