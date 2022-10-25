@@ -1,0 +1,61 @@
+body {
+  display: flex;
+}
+#check {
+  list-style: none;
+  height: 400px;
+  overflow: scroll;
+}
+.wordleBox {
+  width: 60px;
+  height: 60px;
+  margin: 0.1em;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #eee;
+}
+.wordleBox.empty {
+  background: red;
+}
+
+.wordleBox.wrong {
+  background: yellow;
+}
+
+.wordleBox.right {
+  background: green;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 65px);
+  justify-content: space-around;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+#game {
+  width: 350px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 5px white;
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+/*뒤집어지는듯한 효과*/
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
